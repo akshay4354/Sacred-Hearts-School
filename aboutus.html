@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Sacred Hearts School</title>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <style>
+    
+  </style>
+   <script src="https://hcaptcha.com/1/api.js" async defer></script>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2">
+          <img id="logo" src="/res/images/sc_logo.jpg" class="py-2 px-0 "alt="Sacred Hearts School Logo">
+        </div>
+        <div class="col-md-10 py-0  align-content-start " style="padding: 0px;">
+
+            <h2 class="mt-3 m-0 text-center" style="color:#ec027b;text-align:left; text-shadow: 2px 2px #ffa3d5;">SACRED HEARTS ENGLISH MEDIUM HIGH SCHOOL</h2>
+            <h4 class="m-0 text-center" style=" color:#ec027b; color:#78742a;text-align:left">Kuchipudi</h4>
+            <h4 class="m-0 text-center" style=" color:#ec027b; color:#e04897;text-align:left ">Andhra Pradesh - 522313</h4>
+        </div>
+      </div>
+    </div>
+  </header>
+<!-- Navbar -->
+  <nav class="navbar navlinks text-center mx-auto sticky-top">
+    <a class="navitemfirst" href="/index.html">Home</a>
+    <div class="dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Administration</a>
+      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item droplink" href="/ac.html">Academic Calender</a>
+          <a class="dropdown-item droplink" href="/timetables.html">Time Tables</a>
+          <a class="dropdown-item droplink" href="/um.html">Event Registrations</a>
+          <a class="dropdown-item droplink" href="/um.html">Counsellers</a>
+      </div>
+      </div>
+    <div class="dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Admissions</a>
+      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item droplink" href="/onlineadmission.html">Online Admission Form</a>
+          <a class="dropdown-item droplink" href="/acell.html">Admission Cell</a>
+      </div>
+  </div>
+    
+    <a href="/gallery.html">Gallery</a>
+    
+    <a class="payfeeonline" href="#">Pay fee online</a>
+    <div class="dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fab fa-servicestack"></i>Login</a>
+      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item droplinkparent droplink" href="#">Parent Login</a>
+          <a class="dropdown-item droplinkteacher droplink" href="#">Teacher / Principal Login</a>
+      </div>
+  </div>
+    <a class="navitemlast" href="/aboutus.html">About Us</a>
+</nav>
+<!-- Navbar Ends -->
+
+
+<div id="loginModal" class="modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-center">Parent Login</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="userId">User ID</label>
+            <input type="text" class="form-control" id="userId">
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" id="password">
+          </div>
+          <div class="form-group">
+            <a href="#" class="forgot-password">Forgot Password?</a>
+          </div>
+          <div class="form-group">
+            <div class="h-captcha" data-sitekey="789d183f-0427-497e-9ad6-8a278802703e"></div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary">Login</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="teacherLoginModal" class="modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Teacher Login</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="teacherUserId">Teacher ID</label>
+            <input type="text" class="form-control" id="teacherUserId">
+          </div>
+          <div class="form-group">
+            <label for="teacherPassword">Password</label>
+            <input type="password" class="form-control" id="teacherPassword">
+          </div>
+          <div class="form-group">
+            <button type="button" class="btn btn-primary" id="sendOtpButton">Send OTP</button>
+          </div>
+          <div class="form-group">
+            <label for="teacherOtp">OTP</label>
+            <input type="text" class="form-control" id="teacherOtp">
+          </div>
+          <div class="form-group">
+            <a href="#" class="forgot-password">Forgot Password?</a>
+          </div>
+          <div class="form-group">
+            <div class="h-captcha" data-sitekey="789d183f-0427-497e-9ad6-8a278802703e"></div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary">Login</button>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+<div class="container about">
+    <div class="row">
+      <div class="col-md-2">
+        <img id="logo" src="/res/images/sc_logo.jpg" class="py-2 px-0 "alt="Sacred Hearts School Logo">
+      </div>
+      <div class="col-md-10 py-0  align-content-start " style="padding: 0px;">
+
+          <h3 class="m-0 text-center" style=" color:#ec027b; color:#e04897;text-align:left ">Sacred Hearts English Medium High School is an initiative of the Missionaries Sacred Hearts of Jesus and Mary.
+        </h3>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+        <p class="aboutustext font-italic font-weight-bolder text-xl">Sacred Hearts English Medium High School is an initiative of the Missionaries Sacred Hearts of Jesus and Mary. During 90s, Rev. Fr. Angelo Terraciano and Fr. Antony Attumaly were actively engaged in vocation promotion in different parts of Andhra Pradesh. During their visits to the State they came 
+            in contact with the Redomptorists Fathers at Tenali, who helped them. It was Rev. Fr. Tony Mascharnas CSSR who proposed our fathers to begin a mission centre in Guntur Diocese. Subsequently, Fr. Tony recommended MSSCC Congregation the then Bishop of Guntur, Most Rev. Dr. Gali Bali, who willingly invited us to open a missionary presence
+             in the diocese. Endowed by missionary zeal of St. Gaetano Errico and with the help of Fr. Tony, the congregation purchased a piece of land at Kuchipudi village which is about 7 KM from Tenali town. In 1994, Most Rev. Dr. Gali Bali, the Bishop of Guntur bifurcated Tenali parish and erected a new parish at Kuchipudi and entrusted to the 
+             Missionaries of the Sacred Hearts of Jesus and Mary.</p>
+
+
+            <p class="aboutustext font-italic font-weight-bolder">Rev. Fr. Gorge Tharakunnel MSsCc was appointed the first parish priest and superior of the community. Kuchipudi was as a poor village with minimum facilities. Children had to go to far off places for education. In response to the situation and with the objective of providing quality education and employment opportunities to the youth,
+                 an English medium school, Telugu medium tuition centre, and a balwadi school were started. Thus, the Sacred Hearts English Medium School was born on 29/06/1994. This institute began from the scratches and the humble beginning has developed over the years and become a full-fledged school that provides the ambience for the children from
+                  Kuchipudi and surrounding 26 villages to pursue their goal of good education. 
+                 We thank Almighty God for His graces and providence. Sacred Hearts envisages accomplishing the mission of providing quality education and serves the people of Kuchipudi with the motto of “Shaping Mind and Soul” and prepares the brighter children for the future. Children are formed to pursue knowledge, wisdom, love and values to live as
+                  good citizens in the society. The school has 100 % results for the SSC examination from the beginning of the school.</p>
+    </div>
+  </div>
+<div class="container">
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="2000">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="/res/images/school1.jpg" class="d-block w-100" alt="Image 1">
+        </div>
+        <div class="carousel-item">
+          <img src="/res/images/school2.jpg" class="d-block w-100" alt="Image 2">
+        </div>
+        <div class="carousel-item">
+          <img src="/res/images/school3.jpg" class="d-block w-100" alt="Image 3">
+        </div>
+        <div class="carousel-item">
+          <img src="/res/images/school4.jpg" class="d-block w-100" alt="Image 4">
+        </div>
+        <div class="carousel-item">
+          <img src="/res/images/school5.jpg" class="d-block w-100" alt="Image 5">
+        </div>
+        <div class="carousel-item">
+          <img src="/res/images/school6.jpg" class="d-block w-100" alt="Image 6">
+        </div>
+        <div class="carousel-item">
+          <img src="/res/images/school7.jpg" class="d-block w-100" alt="Image 7">
+        </div>
+        <div class="carousel-item">
+          <img src="/res/images/school9.jpg" class="d-block w-100" alt="Image 9">
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+  <br>
+  <br>
+  <div id="contact-container">
+    <!--<img id="logo" src="/res/images/sc_logo.jpg" alt="Logo">-->
+    <div id="contact-details">
+      <h2>Contact Us</h2>
+      <p>Phone: 08644-252589</p>
+      <p>Email: sacredheartskuchipudi@gmail.com</p>
+      <p>Address: Kuchipudi - 522313 , Amarthalur Mandal , Guntur District, Andhra Pradesh</p>
+      <ul class="social-list">
+        <li>
+          <a href="https://www.facebook.com/" class="facebook"><i class="fab fa-facebook"></i></a>
+        </li>
+        <li>
+          <a href="https://twitter.com/" class="twitter"><i class="fab fa-twitter"></i></a>
+        </li>
+        <li><a href="https://linkedin.com/" class="linkedin"><i class="fab fa-linkedin"></i></a></li>
+        <li><a href="https://www.instagram.com/" class="instagram"><i class="fab fa-instagram"></i></a></li>
+        <li><a href="https://plus.google.com/" class="googlePlus"><i class="fab fa-google-plus"></i></a></li>
+      </ul>
+    </div>
+  </div>
+  
+  
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script>
+  $(document).ready(function() {
+    $('.droplinkparent').click(function(e) {
+      e.preventDefault();
+      $('#loginModal').modal('show');
+    });
+    $('.payfeeonline').click(function(e) {
+      e.preventDefault();
+      $('#loginModal').modal('show');
+    });
+
+  
+  $('.droplinkteacher').click(function(e) {
+        e.preventDefault();
+        $('#teacherLoginModal').modal('show');
+      });
+
+      $('#sendOtpButton').click(function(e) {
+        e.preventDefault();
+        // You can add your logic here to send the OTP to the user
+      });
+    });
+</script>
+</html>

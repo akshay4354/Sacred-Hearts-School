@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Sacred Hearts School</title>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <style>
+    
+  </style>
+   <script src="https://hcaptcha.com/1/api.js" async defer></script>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2">
+          <img id="logo" src="/res/images/sc_logo.jpg" class="py-2 px-0 "alt="Sacred Hearts School Logo">
+        </div>
+        <div class="col-md-10 py-0  align-content-start " style="padding: 0px;">
+
+            <h2 class="mt-3 m-0 text-center" style="color:#ec027b;text-align:left; text-shadow: 2px 2px #ffa3d5;">SACRED HEARTS ENGLISH MEDIUM HIGH SCHOOL</h2>
+            <h4 class="m-0 text-center" style=" color:#ec027b; color:#78742a;text-align:left">Kuchipudi</h4>
+            <h4 class="m-0 text-center" style=" color:#ec027b; color:#e04897;text-align:left ">Andhra Pradesh - 522313</h4>
+        </div>
+      </div>
+    </div>
+  </header>
+<!-- Navbar -->
+  <nav class="navbar navlinks text-center mx-auto sticky-top">
+    <a class="navitemfirst" href="/index.html">Home</a>
+    <div class="dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Administration</a>
+      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item droplink" href="/ac.html">Academic Calender</a>
+          <a class="dropdown-item droplink" href="/timetables.html">Time Tables</a>
+          <a class="dropdown-item droplink" href="/um.html">Event Registrations</a>
+          <a class="dropdown-item droplink" href="/um.html">Counsellers</a>
+      </div>
+      </div>
+    <div class="dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Admissions</a>
+      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item droplink" href="/onlineadmission.html">Online Admission Form</a>
+          <a class="dropdown-item droplink" href="/acell.html">Admission Cell</a>
+      </div>
+  </div>
+    
+    <a href="/gallery.html">Gallery</a>
+    
+    <a class="payfeeonline" href="#">Pay fee online</a>
+    <div class="dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fab fa-servicestack"></i>Login</a>
+      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item droplinkparent droplink" href="#">Parent Login</a>
+          <a class="dropdown-item droplinkteacher droplink" href="#">Teacher / Principal Login</a>
+      </div>
+  </div>
+    <a class="navitemlast" href="/aboutus.html">About Us</a>
+</nav>
+<!-- Navbar Ends -->
+
+
+<div id="loginModal" class="modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-center">Parent Login</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="userId">User ID</label>
+            <input type="text" class="form-control" id="userId">
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" id="password">
+          </div>
+          <div class="form-group">
+            <a href="#" class="forgot-password">Forgot Password?</a>
+          </div>
+          <div class="form-group">
+            <div class="h-captcha" data-sitekey="789d183f-0427-497e-9ad6-8a278802703e"></div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary">Login</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="teacherLoginModal" class="modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Teacher Login</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="teacherUserId">Teacher ID</label>
+            <input type="text" class="form-control" id="teacherUserId">
+          </div>
+          <div class="form-group">
+            <label for="teacherPassword">Password</label>
+            <input type="password" class="form-control" id="teacherPassword">
+          </div>
+          <div class="form-group">
+            <button type="button" class="btn btn-primary" id="sendOtpButton">Send OTP</button>
+          </div>
+          <div class="form-group">
+            <label for="teacherOtp">OTP</label>
+            <input type="text" class="form-control" id="teacherOtp">
+          </div>
+          <div class="form-group">
+            <a href="#" class="forgot-password">Forgot Password?</a>
+          </div>
+          <div class="form-group">
+            <div class="h-captcha" data-sitekey="789d183f-0427-497e-9ad6-8a278802703e"></div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary">Login</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="whats-new-container">
+    <h3 class="whats-new-heading">What's New:</h3>
+    <div class="marquee-container">
+      <div class="marquee" onmouseover="this.style.animationPlayState='paused'" onmouseout="this.style.animationPlayState='running'">
+        <h4>SSC 2023 Results declared. Click here to <a href="#">Download</a><i class="fa fa-trophy" aria-hidden="true"></i></h4>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="jumbotron" id="jumbo">
+  <h1>Congratulations to the SSC Toppers 2023 !</h1>
+  <div class="card-container">
+    <div class="card">
+      <img src="/res/images/ben.jpg" alt="Topper 1">
+      <h3>Ben</h3>
+      <h2 class="text-primary">10/10<span> CGPA</span></h2>
+    </div>
+    <div class="card">
+      <img src="/res/images/shizuka.jpg" alt="Topper 2">
+      <h3>Shizuka</h3>
+      <h2 class="text-primary">9.8/10<span> CGPA</span></h2>
+    </div>
+    <div class="card">
+      <img src="/res/images/nobita.jpg" alt="Topper 3">
+      <h3>Nobita</h3>
+      <h2 class="text-primary">9.7/10<span> CGPA</span></h2>
+    </div>
+  </div>
+</div>
+<!--Vision and Mission-->
+<div class="vmbox"><br><br><br><br>
+<div class="container vm">
+  <div class="section">
+    <div class="vision-mission-container">
+      <div class="vision">
+        <h2 class="text-center">Vision</h2>
+        <p class="text-justify">Our vision is to empower students to become lifelong learners, critical thinkers, and responsible global citizens who strive for excellence in all areas of their lives.</p>
+      </div>
+      <div class="mission">
+        <h2 class="text-center">Mission</h2>
+        <p class="text-justify">Our mission is to provide a nurturing and inclusive learning environment that fosters academic, social, and emotional growth. We are committed to delivering a comprehensive education that prepares students to adapt to an ever-changing world and contribute positively to society.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+<br>
+<br>
+</div>
+<div id="contact-container">
+  <!--<img id="logo" src="/res/images/sc_logo.jpg" alt="Logo">-->
+  <div id="contact-details">
+    <h2>Contact Us</h2>
+    <p>Phone: 08644-252589</p>
+    <p>Email: sacredheartskuchipudi@gmail.com</p>
+    <p>Address: Kuchipudi - 522313 , Amarthalur Mandal , Guntur District, Andhra Pradesh</p>
+    <ul class="social-list">
+      <li>
+        <a href="https://www.facebook.com/" class="facebook"><i class="fab fa-facebook"></i></a>
+      </li>
+      <li>
+        <a href="https://twitter.com/" class="twitter"><i class="fab fa-twitter"></i></a>
+      </li>
+      <li><a href="https://linkedin.com/" class="linkedin"><i class="fab fa-linkedin"></i></a></li>
+      <li><a href="https://www.instagram.com/" class="instagram"><i class="fab fa-instagram"></i></a></li>
+      <li><a href="https://plus.google.com/" class="googlePlus"><i class="fab fa-google-plus"></i></a></li>
+    </ul>
+  </div>
+</div>
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script>
+  $(document).ready(function() {
+    $('.droplinkparent').click(function(e) {
+      e.preventDefault();
+      $('#loginModal').modal('show');
+    });
+    $('.payfeeonline').click(function(e) {
+      e.preventDefault();
+      $('#loginModal').modal('show');
+    });
+
+  
+  $('.droplinkteacher').click(function(e) {
+        e.preventDefault();
+        $('#teacherLoginModal').modal('show');
+      });
+
+      $('#sendOtpButton').click(function(e) {
+        e.preventDefault();
+        // You can add your logic here to send the OTP to the user
+      });
+    });
+</script>
+</html>

@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <head>
+        <meta charset="UTF-8">
+        <title>Sacred Hearts School</title>
+        <link rel="stylesheet" href="/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <style>
+body {
+                font-family: Arial, sans-serif;
+                background-color: #ffffff;
+            }
+
+            h2 {
+                color: #333333;
+                text-align: center;
+                margin-top: 30px;
+            }
+
+            form.admission-form {
+                width: 400px;
+                margin: 30px auto;
+                background-color: #ffffff;
+                padding: 20px;
+                border-radius: 5px;
+                box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+            }
+
+            form.admission-form label {
+                display: block;
+                margin-top: 10px;
+                color: #333333;
+                font-weight: bold;
+            }
+
+            form.admission-form input[type="text"],
+            form.admission-form input[type="number"],
+            form.admission-form input[type="tel"],
+            form.admission-form input[type="email"],
+            form.admission-form textarea {
+                width: 100%;
+                padding: 8px;
+                border: 1px solid #cccccc;
+                border-radius: 3px;
+                box-sizing: border-box;
+                font-size: 14px;
+                margin-bottom: 10px;
+            }
+
+            form.admission-form select {
+                width: 100%;
+                padding: 8px;
+                border: 1px solid #cccccc;
+                border-radius: 3px;
+                box-sizing: border-box;
+                font-size: 14px;
+                margin-bottom: 10px;
+            }
+
+            form.admission-form input[type="submit"] {
+                background-color: #4CAF50;
+                color: #ffffff;
+                padding: 10px 15px;
+                border: none;
+                border-radius: 3px;
+                cursor: pointer;
+                font-size: 14px;
+            }
+
+            form.admission-form input[type="submit"]:hover {
+                background-color: #45a049;
+            }
+
+        </style>
+        <script src="https://hcaptcha.com/1/api.js" async defer></script>
+    </head>
+
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2">
+          <img id="logo" src="/res/images/sc_logo.jpg" class="py-2 px-0 "alt="Sacred Hearts School Logo">
+        </div>
+        <div class="col-md-10 py-0  align-content-start " style="padding: 0px;">
+
+            <h2 class="mt-3 m-0 text-center" style="color:#ec027b;text-align:left; text-shadow: 2px 2px #ffa3d5;">SACRED HEARTS ENGLISH MEDIUM HIGH SCHOOL</h2>
+            <h4 class="m-0 text-center" style=" color:#ec027b; color:#78742a;text-align:left">Kuchipudi</h4>
+            <h4 class="m-0 text-center" style=" color:#ec027b; color:#e04897;text-align:left ">Andhra Pradesh - 522313</h4>
+        </div>
+      </div>
+    </div>
+  </header>
+<!-- Navbar -->
+  <nav class="navbar navlinks text-center mx-auto sticky-top">
+    <a class="navitemfirst" href="/index.html">Home</a>
+    <div class="dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Administration</a>
+      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item droplink" href="/ac.html">Academic Calender</a>
+          <a class="dropdown-item droplink" href="/timetables.html">Time Tables</a>
+          <a class="dropdown-item droplink" href="/um.html">Event Registrations</a>
+          <a class="dropdown-item droplink" href="/um.html">Counsellers</a>
+      </div>
+      </div>
+    <div class="dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Admissions</a>
+      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item droplink" href="/onlineadmission.html">Online Admission Form</a>
+          <a class="dropdown-item droplink" href="/acell.html">Admission Cell</a>
+      </div>
+  </div>
+    
+    <a href="/gallery.html">Gallery</a>
+    
+    <a class="payfeeonline" href="#">Pay fee online</a>
+    <div class="dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fab fa-servicestack"></i>Login</a>
+      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item droplinkparent droplink" href="#">Parent Login</a>
+          <a class="dropdown-item droplinkteacher droplink" href="#">Teacher / Principal Login</a>
+      </div>
+  </div>
+    <a class="navitemlast" href="/aboutus.html">About Us</a>
+</nav>
+<!-- Navbar Ends -->
+
+
+<div id="loginModal" class="modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-center">Parent Login</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="userId">User ID</label>
+            <input type="text" class="form-control" id="userId">
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" id="password">
+          </div>
+          <div class="form-group">
+            <a href="#" class="forgot-password">Forgot Password?</a>
+          </div>
+          <div class="form-group">
+            <div class="h-captcha" data-sitekey="789d183f-0427-497e-9ad6-8a278802703e"></div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary">Login</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="teacherLoginModal" class="modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Teacher Login</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="teacherUserId">Teacher ID</label>
+            <input type="text" class="form-control" id="teacherUserId">
+          </div>
+          <div class="form-group">
+            <label for="teacherPassword">Password</label>
+            <input type="password" class="form-control" id="teacherPassword">
+          </div>
+          <div class="form-group">
+            <button type="button" class="btn btn-primary" id="sendOtpButton">Send OTP</button>
+          </div>
+          <div class="form-group">
+            <label for="teacherOtp">OTP</label>
+            <input type="text" class="form-control" id="teacherOtp">
+          </div>
+          <div class="form-group">
+            <a href="#" class="forgot-password">Forgot Password?</a>
+          </div>
+          <div class="form-group">
+            <div class="h-captcha" data-sitekey="789d183f-0427-497e-9ad6-8a278802703e"></div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary">Login</button>
+      </div>
+    </div>
+  </div>
+</div>
+<h2>Online Admission Form</h2>
+
+<form class="admission-form">
+    <label for="name">Name:</label>
+    <input type="text" id="name" required>
+
+    <label for="age">Age:</label>
+    <input type="number" id="age" required>
+
+    <label for="grade">Grade:</label>
+    <select id="grade" required>
+        <option value="">Select Grade</option>
+        <option value="1">LKG</option>
+        <option value="2">UKG</option>
+        <option value="3">Class I</option>
+        <option value="4">Class II</option>
+        <option value="5">Class III</option>
+        <option value="6">Class IV</option>
+        <option value="7">Class V</option>
+        <option value="8">Class VI</option>
+        <option value="9">Class VII</option>
+        <option value="10">Class VIII</option>
+        <option value="11">Class IX</option>
+        <option value="12">Class X</option>
+        <option value="13">Class XI</option>
+        <option value="14">Class XII</option>
+    </select>
+
+    <label for="fathersName">Father's Name:</label>
+    <input type="text" id="fathersName" required>
+
+    <label for="mothersName">Mother's Name:</label>
+    <input type="text" id="mothersName" required>
+
+    <label for="previousSchoolGrade">Previous School Grade:</label>
+    <input type="text" id="previousSchoolGrade" required>
+
+    <label for="previousSchoolName">Previous School Name:</label>
+    <input type="text" id="previousSchoolName" required>
+
+    <label for="address">Address:</label>
+    <textarea id="address" required></textarea>
+
+    <label for="contact">Contact Number:</label>
+    <input type="tel" id="contact" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" required>
+
+    <input type="submit" value="Submit">
+</form>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script>
+  $(document).ready(function() {
+    $('.droplinkparent').click(function(e) {
+      e.preventDefault();
+      $('#loginModal').modal('show');
+    });
+
+  
+  $('.droplinkteacher').click(function(e) {
+        e.preventDefault();
+        $('#teacherLoginModal').modal('show');
+      });
+
+      $('#sendOtpButton').click(function(e) {
+        e.preventDefault();
+        // You can add your logic here to send the OTP to the user
+      });
+    });
+</script>
+</body>
+</html>
