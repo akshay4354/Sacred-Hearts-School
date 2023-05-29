@@ -153,12 +153,12 @@
 }
 
 .vm h2 {
-  color: #333;
+  color: #faf7f7;
   font-size: 24px;
 }
 
 .vm p {
-  color: #555;
+  color: #faf7f7;
   font-size: 18px;
   line-height: 1.5;
 }
@@ -189,7 +189,7 @@
 }
 
 .vmbox {
-  background-image: url('images/school2.jpg');
+  background-color:#777777;
 }
 
 body {
