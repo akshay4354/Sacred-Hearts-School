@@ -1,51 +1,86 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <title>Sacred Hearts School</title>
-  <link rel="stylesheet" href="/style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  <style>
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 20px;
-    }
+    <head>
+        <meta charset="UTF-8">
+        <title>Sacred Hearts School</title>
+        <link rel="stylesheet" href="/res/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <style>
+body {
+                font-family: Arial, sans-serif;
+                background-color: #ffffff;
+            }
 
-    th,
-    td {
-      padding: 10px;
-      text-align: left;
-      border-bottom: 1px solid #ddd;
-    }
+            h2 {
+                color: #333333;
+                text-align: center;
+                margin-top: 30px;
+            }
 
-    th {
-      background-color: #f2f2f2;
-      font-weight: bold;
-    }
+            form.admission-form {
+                width: 400px;
+                margin: 30px auto;
+                background-color: #ffffff;
+                padding: 20px;
+                border-radius: 5px;
+                box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+            }
 
-    tbody tr:nth-child(even) {
-      background-color: #f9f9f9;
-    }
+            form.admission-form label {
+                display: block;
+                margin-top: 10px;
+                color: #333333;
+                font-weight: bold;
+            }
 
-    tbody tr:hover {
-      background-color: #f5f5f5;
-    }
+            form.admission-form input[type="text"],
+            form.admission-form input[type="number"],
+            form.admission-form input[type="tel"],
+            form.admission-form input[type="email"],
+            form.admission-form textarea {
+                width: 100%;
+                padding: 8px;
+                border: 1px solid #cccccc;
+                border-radius: 3px;
+                box-sizing: border-box;
+                font-size: 14px;
+                margin-bottom: 10px;
+            }
 
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-    }
+            form.admission-form select {
+                width: 100%;
+                padding: 8px;
+                border: 1px solid #cccccc;
+                border-radius: 3px;
+                box-sizing: border-box;
+                font-size: 14px;
+                margin-bottom: 10px;
+            }
 
-    h3 {
-      margin-top: 40px;
-      text-align: center;
-    }
-    
-  </style>
-   <script src="https://hcaptcha.com/1/api.js" async defer></script>
+            form.admission-form input[type="submit"] {
+                background-color: #4CAF50;
+                color: #ffffff;
+                padding: 10px 15px;
+                border: none;
+                border-radius: 3px;
+                cursor: pointer;
+                font-size: 14px;
+            }
+
+            form.admission-form input[type="submit"]:hover {
+                background-color: #45a049;
+            }
+
+        </style>
+        <script src="https://hcaptcha.com/1/api.js" async defer></script>
+    </head>
+
 </head>
 <body>
   <header>
@@ -70,22 +105,22 @@
       <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         Administration</a>
       <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item droplink" href="/ac.html">Academic Calender</a>
-          <a class="dropdown-item droplink" href="/timetables.html">Time Tables</a>
-          <a class="dropdown-item droplink" href="/um.html">Event Registrations</a>
-          <a class="dropdown-item droplink" href="/um.html">Counsellers</a>
+          <a class="dropdown-item droplink" href="/res/ac.html">Academic Calender</a>
+          <a class="dropdown-item droplink" href="/res/timetables.html">Time Tables</a>
+          <a class="dropdown-item droplink" href="/res/um.html">Event Registrations</a>
+          <a class="dropdown-item droplink" href="/res/um.html">Counsellers</a>
       </div>
       </div>
     <div class="dropdown">
       <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         Admissions</a>
       <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item droplink" href="/onlineadmission.html">Online Admission Form</a>
-          <a class="dropdown-item droplink" href="/acell.html">Admission Cell</a>
+          <a class="dropdown-item droplink" href="/res/onlineadmission.html">Online Admission Form</a>
+          <a class="dropdown-item droplink" href="/res/acell.html">Admission Cell</a>
       </div>
   </div>
     
-    <a href="/gallery.html">Gallery</a>
+    <a href="/res/gallery.html">Gallery</a>
     
     <a class="payfeeonline" href="#">Pay fee online</a>
     <div class="dropdown">
@@ -96,7 +131,7 @@
           <a class="dropdown-item droplinkteacher droplink" href="#">Teacher / Principal Login</a>
       </div>
   </div>
-    <a class="navitemlast" href="/aboutus.html">About Us</a>
+    <a class="navitemlast" href="/res/aboutus.html">About Us</a>
 </nav>
 <!-- Navbar Ends -->
 
@@ -174,87 +209,64 @@
     </div>
   </div>
 </div>
- <!-- Academic Calendar -->
- <div class="container">
-    <h3 class="text-center mt-5">Academic Calendar 2023-24</h3>
-    <table class="table mt-3">
-      <thead>
-        <tr>
-          <th>Date</th>
-          <th>Event</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-            <td>July 8, 2023</td>
-            <td>YSR Jayanthi (Holiday)</td>
-          </tr>
-        <tr>
-          <td>August 15, 2023</td>
-          <td>Independence Day (Holiday)</td>
-        </tr>
-        <tr>
-          <td>September 1-7, 2023</td>
-          <td>Summative Assessment 1</td>
-        </tr>
-        <tr>
-          <td>September 20, 2023</td>
-          <td>Formative Assessment 1</td>
-        </tr>
-        <tr>
-          <td>October 2, 2023</td>
-          <td>Gandhi Jayanti (Holiday)</td>
-        </tr>
-        <tr>
-          <td>November 14, 2023</td>
-          <td>Children's Day (Holiday)</td>
-        </tr>
-        <tr>
-          <td>December 1-7, 2023</td>
-          <td>Summative Assessment 2</td>
-        </tr>
-        <tr>
-          <td>December 20, 2023</td>
-          <td>Formative Assessment 2</td>
-        </tr>
-        <tr>
-          <td>January 26, 2024</td>
-          <td>Republic Day (Holiday)</td>
-        </tr>
-        <tr>
-          <td>February 1-7, 2024</td>
-          <td>Summative Assessment 3</td>
-        </tr>
-        <tr>
-          <td>February 20, 2024</td>
-          <td>Formative Assessment 3</td>
-        </tr>
-        <tr>
-          <td>March 10-20, 2024</td>
-          <td>Summative Assessment 4</td>
-        </tr>
-        <tr>
-          <td>March 22-29, 2024</td>
-          <td>Formative Assessment 4</td>
-        </tr>
-        <tr>
-          <td>April 1-7, 2024</td>
-          <td>Annual Exams</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-<h5 class="text-danger text-center">Note: Any changes in the above dates will be duly communicated to your registered mobile number.</h5>
-</body>
+<h2>Online Admission Form</h2>
+
+<form class="admission-form">
+    <label for="name">Name:</label>
+    <input type="text" id="name" required>
+
+    <label for="age">Age:</label>
+    <input type="number" id="age" required>
+
+    <label for="grade">Grade:</label>
+    <select id="grade" required>
+        <option value="">Select Grade</option>
+        <option value="1">LKG</option>
+        <option value="2">UKG</option>
+        <option value="3">Class I</option>
+        <option value="4">Class II</option>
+        <option value="5">Class III</option>
+        <option value="6">Class IV</option>
+        <option value="7">Class V</option>
+        <option value="8">Class VI</option>
+        <option value="9">Class VII</option>
+        <option value="10">Class VIII</option>
+        <option value="11">Class IX</option>
+        <option value="12">Class X</option>
+        <option value="13">Class XI</option>
+        <option value="14">Class XII</option>
+    </select>
+
+    <label for="fathersName">Father's Name:</label>
+    <input type="text" id="fathersName" required>
+
+    <label for="mothersName">Mother's Name:</label>
+    <input type="text" id="mothersName" required>
+
+    <label for="previousSchoolGrade">Previous School Grade:</label>
+    <input type="text" id="previousSchoolGrade" required>
+
+    <label for="previousSchoolName">Previous School Name:</label>
+    <input type="text" id="previousSchoolName" required>
+
+    <label for="address">Address:</label>
+    <textarea id="address" required></textarea>
+
+    <label for="contact">Contact Number:</label>
+    <input type="tel" id="contact" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" required>
+
+    <input type="submit" value="Submit">
+</form>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 <script>
   $(document).ready(function() {
     $('.droplinkparent').click(function(e) {
-      e.preventDefault();
-      $('#loginModal').modal('show');
-    });
-    $('.payfeeonline').click(function(e) {
       e.preventDefault();
       $('#loginModal').modal('show');
     });
@@ -271,4 +283,5 @@
       });
     });
 </script>
+</body>
 </html>
